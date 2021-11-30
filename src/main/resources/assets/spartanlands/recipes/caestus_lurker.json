@@ -1,0 +1,1 @@
+{"pattern": ["iw"], "type": "minecraft:crafting_shaped", "result": {"item": "spartanlands:caestus_lurker"}, "key": {"i": {"item": "thebetweenlands:weedwood_planks"}, "w": {"item": "thebetweenlands:items_misc", "data": 4}}}
