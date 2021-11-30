@@ -8,6 +8,7 @@ import com.oblivioussp.spartanweaponry.api.DamageHelper;
 import com.oblivioussp.spartanweaponry.api.SpartanWeaponryAPI;
 import com.oblivioussp.spartanweaponry.client.gui.CreativeTabsSW;
 import com.chaosbuffalo.spartanlands.init.ModelRenderRegistrySLands;
+import thebetweenlands.common.BetweenlandsAPI;
 import com.oblivioussp.spartanweaponry.item.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -37,6 +38,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Predicate;
 
 /**
  * Created by Jacob on 7/20/2018.
@@ -170,6 +172,8 @@ public class ItemRegistrySpartanlands {
 
         for (Item it : item_set){
             ev.getRegistry().register(it);
+            Predicate<ItemStack> predicate = itemStack -> it.getRegistryName().toString().length() > 0;
+            BetweenlandsAPI.getInstance().registerWhitelistedOverworldItem(it.getRegistryName(), predicate);
         }
         ALL_ITEMS.forEach(ev.getRegistry()::register);
     }

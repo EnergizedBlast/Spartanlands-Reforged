@@ -12,7 +12,7 @@ public class Spartanlands
 {
     public static final String MODID = "spartanlands";
     public static final String NAME = "Spartanlands";
-    public static final String VERSION = "0.01";
+    public static final String VERSION = "1.00";
 
     private static Logger logger;
 
